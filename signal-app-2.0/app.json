@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "signal-app-2.0",
-    "slug": "signal-app-2.0",
+    "name": "signal-app-2",
+    "slug": "signal-app-2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

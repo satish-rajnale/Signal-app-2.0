@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react'
+import React, { useEffect, useLayoutEffect ,useState} from 'react'
 import { ScrollView, StatusBar } from 'react-native'
 import { StyleSheet, Text, View , Platform} from 'react-native'
 import CustomListItem from '../components/CustomListItem'
@@ -22,10 +22,12 @@ const HomeScreen = ({navigation}) => {
     useEffect(() => {
        const unsubscribe = db.collection('chats').onSnapshot(snapshot => {
            setChats(snapshot.docs.map(doc => ({
-               
+               id: doc.id,
+               data: doc.data(),
            })))
+           return unsubscribe;
        })
-    }, [input])
+    }, [])
 
 
 
@@ -63,12 +65,23 @@ const HomeScreen = ({navigation}) => {
         });
     }, [navigation])
 
-
+    const enterChat = (id , chatName) => {
+        navigation.navigate("Chat", {
+            id, chatName
+        });
+    }
 
     return (
         <SafeAreaView style={{ paddingTop: Platform.OS === 'android' ? 1: 0}}>
-            <ScrollView>
-                 <CustomListItem/>
+            <ScrollView style={styles.container}>
+                {chats.map(({id, data: {chatName}}) => (
+                         <CustomListItem 
+                            key={id} 
+                            id={id} 
+                            chatName={chatName}
+                            enterChat={enterChat} />
+                ))}
+                
              </ScrollView>
         </SafeAreaView>
     )
@@ -77,5 +90,7 @@ const HomeScreen = ({navigation}) => {
 export default HomeScreen;
 
 const styles = StyleSheet.create({
- 
+ container: {
+     height: "100%",
+ }
 });
