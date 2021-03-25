@@ -24,7 +24,7 @@ const RegisterScreen = ({ navigation}) => {
             .then((authUser) => {
                 authUser.user.updateProfile({
                     displayName: name,
-                    photoURL: imageUrl || "http://pngimg.com/uploads/cowboy/cowboy_PNG32.png"
+                    photoURL: imageUrl || "https://www.pngkit.com/png/full/213-2133496_premier-league-and-fa-cup-premier-league-logo.png"
                 })
             })
             .catch((error) => alert(error.message))
@@ -62,7 +62,8 @@ const RegisterScreen = ({ navigation}) => {
             <Button containerStyle={styles.button}
                     raised
                      onPress={register} 
-                     title='Register'/>
+                     title='Register'
+                    />
             <View style={{height:100}}/>
         </KeyboardAvoidingView>
     )

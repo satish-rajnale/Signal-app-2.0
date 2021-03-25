@@ -17,7 +17,7 @@ const loginScreen = ({ navigation }) => {
       const unsubscribe = auth.onAuthStateChanged((authUser) =>{
          
            if(authUser){
-               navigation.navigate("Home");
+               navigation.replace("Home");
            } 
        });
        return unsubscribe;   
@@ -54,7 +54,7 @@ const loginScreen = ({ navigation }) => {
                      title='Login'/>
             <Button containerStyle={styles.button}
                      type="outline"
-                     onPress={()=> navigation.navigate("Home")} 
+                     onPress={()=> navigation.navigate("Register")} 
                      title='Register'/>
                     
         </KeyboardAvoidingView> 
