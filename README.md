@@ -1,5 +1,6 @@
 # Signal-app-2.0
- 
+ ![signal](https://user-images.githubusercontent.com/76589507/115562684-5c493480-a2d4-11eb-82f0-5aad4f721cd2.jpg)
+
 ---
 title: Signal
 date: "2021"
