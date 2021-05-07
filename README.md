@@ -1,10 +1,11 @@
 # Signal-app-2.0
  ![signal](https://user-images.githubusercontent.com/76589507/115562684-5c493480-a2d4-11eb-82f0-5aad4f721cd2.jpg)
 
+---
 title: Signal
 date: "2021"
 Goal : Designing and building a Signal clone app to redefine privacy.
-
+---
 
 **Signal**  is a cross-platform centralized encrypted messaging service developed by the Signal Technology Foundation and Signal Messenger LLC. It uses the Internet to send one-to-one and group messages, which can include files, voice notes, images and videos.
 
